@@ -2,7 +2,7 @@
 
 namespace Smartwyre.DeveloperTest.Data;
 
-public class RebateDataStore
+public class RebateDataStore : IRebateDataStore
 {
     public Rebate GetRebate(string rebateIdentifier)
     {
@@ -10,7 +10,7 @@ public class RebateDataStore
         return new Rebate();
     }
 
-    public void StoreCalculationResult(Rebate account, decimal rebateAmount)
+    public void StoreCalculationResult(Rebate rebate, decimal rebateAmount)
     {
         // Update account in database, code removed for brevity
     }
